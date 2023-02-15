@@ -1,4 +1,5 @@
-/*let frenchFries = Number(
+//-------------------answer1----------------------------//
+let frenchFries = Number(
   prompt("do you want to order frenchfries (price = 60)")
 );
 
@@ -49,6 +50,21 @@ for (let j = 1; j <= numberOfSeries; j++) {
 }
 document.write(a + "<br>");
 //---------------------------answer4---------------//
+let anyNumber = Number(prompt("enter number"));
+let num = anyNumber % 2;
+switch (num) {
+  case 0:
+    console.log("its even number");
+    break;
+  case 1:
+    console.log("its odd number");
+    break;
+  case 100:
+    console.log("100");
+    break;
+  case 1000:
+    console.log("1000");
+}
 //--------------------------answer5---------------//
 
 let birthYear = prompt("What is your birth year?");
@@ -68,7 +84,7 @@ if (age > 18) {
   } else {
     alert("Sorry, visit again please.");
   }
-}*/
+}
 //   --------------------answer6//
 let firstNumber = Number(prompt("enter any number"));
 let secondNumber = 19;
@@ -76,15 +92,7 @@ let subtracting = firstNumber - secondNumber;
 if (subtracting > 19) {
   console.log(3 * subtracting);
 } else 2 * subtracting;
-//------------------answer10----------------//
 
-let text = "my name is khan";
-let a = text.length;
-if (a >= 10) {
-  for (let i = 1; i <= a; i++) console.log(i);
-} else {
-  console.log("no");
-}
 //   --------------------answer7--------------------------/
 
 let firstInteger = -2;
@@ -96,4 +104,13 @@ if (
   console.log(firstInteger + secondInteger);
 } else {
   console.log(firstInteger * secondInteger);
+}
+//------------------answer10----------------//
+
+let text = "my name is khan";
+let b = text.length;
+if (b >= 10) {
+  for (let i = 1; i <= b; i++) console.log(i);
+} else {
+  console.log("no");
 }
