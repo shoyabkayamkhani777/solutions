@@ -68,8 +68,8 @@ console.log(newArray);
 ### 11...Write a function that takes an array of numbers and returns a new array that only contains numbers that are greater than 5. Use filter function
 
 ```
-let  = [1,2,34,5,6,7,89,0]
-ans = gerter.filter(test)
+let moreThan5 = [1,2,34,5,6,7,89,0]
+ans = moreThan5.filter(test)
 function test(num){
    return num > 5
 }
