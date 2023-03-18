@@ -43,3 +43,34 @@ let person = {
    person.firstName,person.middleName,person.lastName
  );
 ```
+
+### 7...Create an Object with your personal details. Now print all the keys of the object in ascending order.
+
+```
+ let personalDetails = {
+   name: "shoyab",
+   mobile: 7733920986,
+   fatherName: "xyz",
+   city: "merta city",
+ };
+ let key = Object.keys(personalDetails);
+ console.log(key.sort());
+```
+
+### 8..Create an Object with your personal details. Now filter out all the values of the object and show them in descending order.
+
+```
+ let personalDetails = {
+  name: "shoyab",
+   mobile: 7733920986,
+   fatherName: "xyz",
+   city: "merta city",
+   aadharNumber :1212121212121212,
+ };
+ let key = Object.keys(personalDetails);
+ let ans = key.sort(sorting);
+ console.log(ans);
+ function sorting(v1, v2) {
+   return v2.length - v1.length;
+ }
+```
