@@ -65,6 +65,28 @@ for (let i = 0; i < arr.length; i++) {
 console.log(newArray);
 ```
 
+### 7...Write a function that takes an array of strings and returns a new array that only contains strings with more than 5 characters.
+
+```
+
+
+function string(characters) {
+   free= [];
+
+  for (let i = 0; i < characters.length; i++) {
+    if (string1[i].length > 5) {
+      free.push(characters[i]);
+    }
+  }
+  return free;
+}
+
+console.log(string(["banana", "mango", "apple", "cheery", "papaya"]));
+
+
+
+```
+
 ### 11...Write a function that takes an array of numbers and returns a new array that only contains numbers that are greater than 5. Use filter function
 
 ```
