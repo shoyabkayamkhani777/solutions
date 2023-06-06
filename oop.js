@@ -1,5 +1,3 @@
-// Define the Account prototype
-
 let Account = function (
   name,
   aadhar,
@@ -20,30 +18,34 @@ let Account = function (
   this.pancard = pancard;
   this.bank = bank;
   this.balance = balance;
+  this.printStatement = balance ? balance : [];
 };
 
-// Define the Account methods
 Account.prototype.withdraw = function (amount) {
   if (amount <= 0 && amount > this.balance) {
     console.log("sorry");
   } else {
     this.balance -= amount;
     console.log("Withdrawal successful. New balance: " + this.balance);
+    this.printStatement.push(-amount)
   }
+
 };
 
 Account.prototype.deposit = function (amount) {
   if (amount <= 0) {
-    console.log("Deposit amount must be greater than 0.");
+    console.log("sorry");
   } else {
     this.balance += amount;
     console.log("Deposit successful. New balance: " + this.balance);
+  this.printStatement.push(amount)
+  
   }
 };
 
 Account.prototype.changePin = function (pin) {
   let currentpin = Number(prompt("please enter  pin"));
-  if (pin === pin) {
+  if (pin === newpin) {
     let newpin = prompt("Please enter your new pin");
     let confirmpin = prompt("Please enter your confirm pin");
     if (newpin === confirmpin) {
@@ -57,30 +59,26 @@ Account.prototype.changePin = function (pin) {
 };
 
 Account.prototype.printStatement = function () {
-  console.log(this.balance);
+  
 };
 Account.prototype.calculateInterest = function () {
-  var interestRate = 0;
+  let interestRate = 0;
   switch (this.bank) {
     case "HDFC":
-      interestRate = 0.08;
+      interestRate = 8;
       break;
     case "SBI":
-      interestRate = 0.07;
+      interestRate = 7;
       break;
     default:
-      interestRate = 0.06;
+      interestRate = 6;
   }
-  var interest = this.balance * interestRate;
+  let interest = (this.balance * interestRate) / 100;
   console.log(
-    "Interest calculated. Rate: " +
-      interestRate * 100 +
-      "%, Interest: " +
-      interest
+    "Interest calculated. Rate: " + interestRate + "%, Interest: " + interest
   );
 };
 
-// Create an example account
 var account = new Account(
   "shoyab",
   "1234 5678 9012",
@@ -93,10 +91,9 @@ var account = new Account(
   10000000
 );
 
-// Call some methods
 console.log(account);
 account.deposit(5000000);
 account.withdraw(2000);
 account.calculateInterest();
-//account.changePin(4321);
+account.changePin(4321);
 account.printStatement();
